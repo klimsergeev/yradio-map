@@ -1,0 +1,952 @@
+{
+    "Абакан": {
+        "regionId": "hakasiya",
+        "regionName": "Республика Хакасия",
+        "city": "Абакан"
+    },
+    "Аксай": {
+        "regionId": "rostov-oblast",
+        "regionName": "Ростовская область",
+        "city": "Аксай"
+    },
+    "Александров": {
+        "regionId": "vladimir-oblast",
+        "regionName": "Владимирская область",
+        "city": "Александров"
+    },
+    "Алтайский край": {
+        "regionId": "altay-kray",
+        "regionName": "Алтайский край",
+        "city": null
+    },
+    "Альметьевск": {
+        "regionId": "tatarstan",
+        "regionName": "Республика Татарстан",
+        "city": "Альметьевск"
+    },
+    "Анжеро-Судженск": {
+        "regionId": "kemerovo-oblast",
+        "regionName": "Кемеровская область",
+        "city": "Анжеро-Судженск"
+    },
+    "Армавир": {
+        "regionId": "krasnodar-kray",
+        "regionName": "Краснодарский край",
+        "city": "Армавир"
+    },
+    "Архангельск": {
+        "regionId": "arkhangelsk-oblast",
+        "regionName": "Архангельская область",
+        "city": "Архангельск"
+    },
+    "Архангельская обл": {
+        "regionId": "arkhangelsk-oblast",
+        "regionName": "Архангельская область",
+        "city": null
+    },
+    "Астрахань": {
+        "regionId": "astrakhan-oblast",
+        "regionName": "Астраханская область",
+        "city": "Астрахань"
+    },
+    "Ачинск": {
+        "regionId": "krasnoyarsk-kray",
+        "regionName": "Красноярский край",
+        "city": "Ачинск"
+    },
+    "Балаково": {
+        "regionId": "saratov-oblast",
+        "regionName": "Саратовская область",
+        "city": "Балаково"
+    },
+    "Балашиха": {
+        "regionId": "moscow-oblast",
+        "regionName": "Московская область",
+        "city": "Балашиха"
+    },
+    "Барнаул": {
+        "regionId": "altay-kray",
+        "regionName": "Алтайский край",
+        "city": "Барнаул"
+    },
+    "Белгород": {
+        "regionId": "belgorod-oblast",
+        "regionName": "Белгородская область",
+        "city": "Белгород"
+    },
+    "Белгородская обл": {
+        "regionId": "belgorod-oblast",
+        "regionName": "Белгородская область",
+        "city": null
+    },
+    "Белово": {
+        "regionId": "kemerovo-oblast",
+        "regionName": "Кемеровская область",
+        "city": "Белово"
+    },
+    "Белокуриха": {
+        "regionId": "altay-kray",
+        "regionName": "Алтайский край",
+        "city": "Белокуриха"
+    },
+    "Бердск": {
+        "regionId": "novosibirsk-oblast",
+        "regionName": "Новосибирская область",
+        "city": "Бердск"
+    },
+    "Березники": {
+        "regionId": "perm-kray",
+        "regionName": "Пермский край",
+        "city": "Березники"
+    },
+    "Бийск": {
+        "regionId": "altay-kray",
+        "regionName": "Алтайский край",
+        "city": "Бийск"
+    },
+    "Биробиджан": {
+        "regionId": "eao",
+        "regionName": "Еврейская автономная область",
+        "city": "Биробиджан"
+    },
+    "Благовещенск": {
+        "regionId": "amur-oblast",
+        "regionName": "Амурская область",
+        "city": "Благовещенск"
+    },
+    "Братск": {
+        "regionId": "irkutsk-oblast",
+        "regionName": "Иркутская область",
+        "city": "Братск"
+    },
+    "Брянск": {
+        "regionId": "bryansk-oblast",
+        "regionName": "Брянская область",
+        "city": "Брянск"
+    },
+    "Брянская обл": {
+        "regionId": "bryansk-oblast",
+        "regionName": "Брянская область",
+        "city": null
+    },
+    "Великий Новгород": {
+        "regionId": "novgorod-oblast",
+        "regionName": "Новгородская область",
+        "city": "Великий Новгород"
+    },
+    "Верхняя Пышма": {
+        "regionId": "sverdlovsk-oblast",
+        "regionName": "Свердловская область",
+        "city": "Верхняя Пышма"
+    },
+    "Верхняя Салда": {
+        "regionId": "sverdlovsk-oblast",
+        "regionName": "Свердловская область",
+        "city": "Верхняя Салда"
+    },
+    "Видное": {
+        "regionId": "moscow-oblast",
+        "regionName": "Московская область",
+        "city": "Видное"
+    },
+    "Владивосток": {
+        "regionId": "primorsky-kray",
+        "regionName": "Приморский край",
+        "city": "Владивосток"
+    },
+    "Владикавказ": {
+        "regionId": "north-osetia",
+        "regionName": "Республика Северная Осетия — Алания",
+        "city": "Владикавказ"
+    },
+    "Владимир": {
+        "regionId": "vladimir-oblast",
+        "regionName": "Владимирская область",
+        "city": "Владимир"
+    },
+    "Владимирская обл": {
+        "regionId": "vladimir-oblast",
+        "regionName": "Владимирская область",
+        "city": null
+    },
+    "Волгоград": {
+        "regionId": "volgograd-oblast",
+        "regionName": "Волгоградская область",
+        "city": "Волгоград"
+    },
+    "Волгоградская обл": {
+        "regionId": "volgograd-oblast",
+        "regionName": "Волгоградская область",
+        "city": null
+    },
+    "Вологда": {
+        "regionId": "vologda-oblast",
+        "regionName": "Вологодская область",
+        "city": "Вологда"
+    },
+    "Вологодская обл": {
+        "regionId": "vologda-oblast",
+        "regionName": "Вологодская область",
+        "city": null
+    },
+    "Воронеж": {
+        "regionId": "voronezh-oblast",
+        "regionName": "Воронежская область",
+        "city": "Воронеж"
+    },
+    "Воронежская обл": {
+        "regionId": "voronezh-oblast",
+        "regionName": "Воронежская область",
+        "city": null
+    },
+    "Всеволожск": {
+        "regionId": "leningrad-oblast",
+        "regionName": "Ленинградская область",
+        "city": "Всеволожск"
+    },
+    "Выборг": {
+        "regionId": "leningrad-oblast",
+        "regionName": "Ленинградская область",
+        "city": "Выборг"
+    },
+    "Горно-Алтайск": {
+        "regionId": "altay-republic",
+        "regionName": "Республика Алтай",
+        "city": "Горно-Алтайск"
+    },
+    "Димитровград": {
+        "regionId": "ulyanovsk-oblast",
+        "regionName": "Ульяновская область",
+        "city": "Димитровград"
+    },
+    "Дмитров": {
+        "regionId": "moscow-oblast",
+        "regionName": "Московская область",
+        "city": "Дмитров"
+    },
+    "Домодедово": {
+        "regionId": "moscow-oblast",
+        "regionName": "Московская область",
+        "city": "Домодедово"
+    },
+    "Екатеринбург": {
+        "regionId": "sverdlovsk-oblast",
+        "regionName": "Свердловская область",
+        "city": "Екатеринбург"
+    },
+    "Ефремов": {
+        "regionId": "tula-oblast",
+        "regionName": "Тульская область",
+        "city": "Ефремов"
+    },
+    "Железноводск": {
+        "regionId": "stavropol-kray",
+        "regionName": "Ставропольский край",
+        "city": "Железноводск"
+    },
+    "Жуковский": {
+        "regionId": "moscow-oblast",
+        "regionName": "Московская область",
+        "city": "Жуковский"
+    },
+    "Зарайск": {
+        "regionId": "moscow-oblast",
+        "regionName": "Московская область",
+        "city": "Зарайск"
+    },
+    "Заречный": {
+        "regionId": "penza-oblast",
+        "regionName": "Пензенская область",
+        "city": "Заречный"
+    },
+    "Иваново": {
+        "regionId": "ivanovo-oblast",
+        "regionName": "Ивановская область",
+        "city": "Иваново"
+    },
+    "Ижевск": {
+        "regionId": "udmurtia",
+        "regionName": "Удмуртская Республика",
+        "city": "Ижевск"
+    },
+    "Иркутск": {
+        "regionId": "irkutsk-oblast",
+        "regionName": "Иркутская область",
+        "city": "Иркутск"
+    },
+    "Иркутская обл": {
+        "regionId": "irkutsk-oblast",
+        "regionName": "Иркутская область",
+        "city": null
+    },
+    "Искитим": {
+        "regionId": "novosibirsk-oblast",
+        "regionName": "Новосибирская область",
+        "city": "Искитим"
+    },
+    "Истра": {
+        "regionId": "moscow-oblast",
+        "regionName": "Московская область",
+        "city": "Истра"
+    },
+    "Итого": {
+        "regionId": "unknown",
+        "regionName": "Неизвестный регион",
+        "city": null
+    },
+    "Йошкар-Ола": {
+        "regionId": "mari-el",
+        "regionName": "Республика Марий Эл",
+        "city": "Йошкар-Ола"
+    },
+    "Казань": {
+        "regionId": "tatarstan",
+        "regionName": "Республика Татарстан",
+        "city": "Казань"
+    },
+    "Калуга": {
+        "regionId": "kaluga-oblast",
+        "regionName": "Калужская область",
+        "city": "Калуга"
+    },
+    "Калужская обл": {
+        "regionId": "kaluga-oblast",
+        "regionName": "Калужская область",
+        "city": null
+    },
+    "Каменск-Уральский": {
+        "regionId": "sverdlovsk-oblast",
+        "regionName": "Свердловская область",
+        "city": "Каменск-Уральский"
+    },
+    "Кашира": {
+        "regionId": "moscow-oblast",
+        "regionName": "Московская область",
+        "city": "Кашира"
+    },
+    "Кемерово": {
+        "regionId": "kemerovo-oblast",
+        "regionName": "Кемеровская область",
+        "city": "Кемерово"
+    },
+    "Кемеровская обл": {
+        "regionId": "kemerovo-oblast",
+        "regionName": "Кемеровская область",
+        "city": null
+    },
+    "Кингисепп": {
+        "regionId": "leningrad-oblast",
+        "regionName": "Ленинградская область",
+        "city": "Кингисепп"
+    },
+    "Киселевск": {
+        "regionId": "kemerovo-oblast",
+        "regionName": "Кемеровская область",
+        "city": "Киселёвск"
+    },
+    "Коломна": {
+        "regionId": "moscow-oblast",
+        "regionName": "Московская область",
+        "city": "Коломна"
+    },
+    "Колпино": {
+        "regionId": "spb",
+        "regionName": "Санкт-Петербург",
+        "city": "Колпино"
+    },
+    "Комсомольск-на-Амуре": {
+        "regionId": "khabarovsk-kray",
+        "regionName": "Хабаровский край",
+        "city": "Комсомольск-на-Амуре"
+    },
+    "Королев": {
+        "regionId": "moscow-oblast",
+        "regionName": "Московская область",
+        "city": "Королёв"
+    },
+    "Кострома": {
+        "regionId": "kostroma-oblast",
+        "regionName": "Костромская область",
+        "city": "Кострома"
+    },
+    "Краснодар": {
+        "regionId": "krasnodar-kray",
+        "regionName": "Краснодарский край",
+        "city": "Краснодар"
+    },
+    "Краснодарский край": {
+        "regionId": "krasnodar-kray",
+        "regionName": "Краснодарский край",
+        "city": null
+    },
+    "Красноярск": {
+        "regionId": "krasnoyarsk-kray",
+        "regionName": "Красноярский край",
+        "city": "Красноярск"
+    },
+    "Красноярский край": {
+        "regionId": "krasnoyarsk-kray",
+        "regionName": "Красноярский край",
+        "city": null
+    },
+    "Курган": {
+        "regionId": "kurgan-oblast",
+        "regionName": "Курганская область",
+        "city": "Курган"
+    },
+    "Курганская обл": {
+        "regionId": "kurgan-oblast",
+        "regionName": "Курганская область",
+        "city": null
+    },
+    "Куровское": {
+        "regionId": "moscow-oblast",
+        "regionName": "Московская область",
+        "city": "Куровское"
+    },
+    "Курск": {
+        "regionId": "kursk-oblast",
+        "regionName": "Курская область",
+        "city": "Курск"
+    },
+    "Кызыл": {
+        "regionId": "tyva",
+        "regionName": "Республика Тыва",
+        "city": "Кызыл"
+    },
+    "Ленинградская обл": {
+        "regionId": "leningrad-oblast",
+        "regionName": "Ленинградская область",
+        "city": null
+    },
+    "Ленинск-Кузнецкий": {
+        "regionId": "kemerovo-oblast",
+        "regionName": "Кемеровская область",
+        "city": "Ленинск-Кузнецкий"
+    },
+    "Липецк": {
+        "regionId": "lipetsk-oblast",
+        "regionName": "Липецкая область",
+        "city": "Липецк"
+    },
+    "Луга": {
+        "regionId": "leningrad-oblast",
+        "regionName": "Ленинградская область",
+        "city": "Луга"
+    },
+    "Луховицы": {
+        "regionId": "moscow-oblast",
+        "regionName": "Московская область",
+        "city": "Луховицы"
+    },
+    "Магнитогорск": {
+        "regionId": "chelyabinsk-oblast",
+        "regionName": "Челябинская область",
+        "city": "Магнитогорск"
+    },
+    "Майкоп": {
+        "regionId": "adygeya",
+        "regionName": "Республика Адыгея",
+        "city": "Майкоп"
+    },
+    "Междуреченск": {
+        "regionId": "kemerovo-oblast",
+        "regionName": "Кемеровская область",
+        "city": "Междуреченск"
+    },
+    "Миасс": {
+        "regionId": "chelyabinsk-oblast",
+        "regionName": "Челябинская область",
+        "city": "Миасс"
+    },
+    "Можайск": {
+        "regionId": "moscow-oblast",
+        "regionName": "Московская область",
+        "city": "Можайск"
+    },
+    "Москва": {
+        "regionId": "moscow",
+        "regionName": "Москва",
+        "city": "Москва"
+    },
+    "Московская обл": {
+        "regionId": "moscow-oblast",
+        "regionName": "Московская область",
+        "city": null
+    },
+    "Мурманск": {
+        "regionId": "murmansk-oblast",
+        "regionName": "Мурманская область",
+        "city": "Мурманск"
+    },
+    "Мытищи": {
+        "regionId": "moscow-oblast",
+        "regionName": "Московская область",
+        "city": "Мытищи"
+    },
+    "Набережные Челны": {
+        "regionId": "tatarstan",
+        "regionName": "Республика Татарстан",
+        "city": "Набережные Челны"
+    },
+    "Наро-Фоминск": {
+        "regionId": "moscow-oblast",
+        "regionName": "Московская область",
+        "city": "Наро-Фоминск"
+    },
+    "Находка": {
+        "regionId": "primorsky-kray",
+        "regionName": "Приморский край",
+        "city": "Находка"
+    },
+    "Нижегородская обл": {
+        "regionId": "nizhegorod-oblast",
+        "regionName": "Нижегородская область",
+        "city": null
+    },
+    "Нижневартовск": {
+        "regionId": "hmao",
+        "regionName": "Ханты-Мансийский АО",
+        "city": "Нижневартовск"
+    },
+    "Нижнекамск": {
+        "regionId": "tatarstan",
+        "regionName": "Республика Татарстан",
+        "city": "Нижнекамск"
+    },
+    "Нижний Новгород": {
+        "regionId": "nizhegorod-oblast",
+        "regionName": "Нижегородская область",
+        "city": "Нижний Новгород"
+    },
+    "Нижний Тагил": {
+        "regionId": "sverdlovsk-oblast",
+        "regionName": "Свердловская область",
+        "city": "Нижний Тагил"
+    },
+    "Никольское": {
+        "regionId": "leningrad-oblast",
+        "regionName": "Ленинградская область",
+        "city": "Никольское"
+    },
+    "Новгородская обл": {
+        "regionId": "novgorod-oblast",
+        "regionName": "Новгородская область",
+        "city": null
+    },
+    "Новоалтайск": {
+        "regionId": "altay-kray",
+        "regionName": "Алтайский край",
+        "city": "Новоалтайск"
+    },
+    "Новокузнецк": {
+        "regionId": "kemerovo-oblast",
+        "regionName": "Кемеровская область",
+        "city": "Новокузнецк"
+    },
+    "Новороссийск": {
+        "regionId": "krasnodar-kray",
+        "regionName": "Краснодарский край",
+        "city": "Новороссийск"
+    },
+    "Новосибирск": {
+        "regionId": "novosibirsk-oblast",
+        "regionName": "Новосибирская область",
+        "city": "Новосибирск"
+    },
+    "Новосибирская обл": {
+        "regionId": "novosibirsk-oblast",
+        "regionName": "Новосибирская область",
+        "city": null
+    },
+    "Новочеркасск": {
+        "regionId": "rostov-oblast",
+        "regionName": "Ростовская область",
+        "city": "Новочеркасск"
+    },
+    "Новошахтинск": {
+        "regionId": "rostov-oblast",
+        "regionName": "Ростовская область",
+        "city": "Новошахтинск"
+    },
+    "Ногинск": {
+        "regionId": "moscow-oblast",
+        "regionName": "Московская область",
+        "city": "Ногинск"
+    },
+    "Ноябрьск": {
+        "regionId": "yanao",
+        "regionName": "Ямало-Ненецкий АО",
+        "city": "Ноябрьск"
+    },
+    "Обнинск": {
+        "regionId": "kaluga-oblast",
+        "regionName": "Калужская область",
+        "city": "Обнинск"
+    },
+    "Омск": {
+        "regionId": "omsk-oblast",
+        "regionName": "Омская область",
+        "city": "Омск"
+    },
+    "Омская обл": {
+        "regionId": "omsk-oblast",
+        "regionName": "Омская область",
+        "city": null
+    },
+    "Орел": {
+        "regionId": "orel-oblast",
+        "regionName": "Орловская область",
+        "city": "Орёл"
+    },
+    "Оренбург": {
+        "regionId": "orenburg-oblast",
+        "regionName": "Оренбургская область",
+        "city": "Оренбург"
+    },
+    "Оренбургская обл": {
+        "regionId": "orenburg-oblast",
+        "regionName": "Оренбургская область",
+        "city": null
+    },
+    "Пенза": {
+        "regionId": "penza-oblast",
+        "regionName": "Пензенская область",
+        "city": "Пенза"
+    },
+    "Первоуральск": {
+        "regionId": "sverdlovsk-oblast",
+        "regionName": "Свердловская область",
+        "city": "Первоуральск"
+    },
+    "Пермская обл": {
+        "regionId": "perm-kray",
+        "regionName": "Пермский край",
+        "city": null
+    },
+    "Пермь": {
+        "regionId": "perm-kray",
+        "regionName": "Пермский край",
+        "city": "Пермь"
+    },
+    "Петергоф": {
+        "regionId": "spb",
+        "regionName": "Санкт-Петербург",
+        "city": "Петергоф"
+    },
+    "Петрозаводск": {
+        "regionId": "karelia",
+        "regionName": "Республика Карелия",
+        "city": "Петрозаводск"
+    },
+    "Петропавловск-Камчатский": {
+        "regionId": "kamchatka-kray",
+        "regionName": "Камчатский край",
+        "city": "Петропавловск-Камчатский"
+    },
+    "Приморский кр": {
+        "regionId": "primorsky-kray",
+        "regionName": "Приморский край",
+        "city": null
+    },
+    "Приозерск": {
+        "regionId": "leningrad-oblast",
+        "regionName": "Ленинградская область",
+        "city": "Приозерск"
+    },
+    "Прокопьевск": {
+        "regionId": "kemerovo-oblast",
+        "regionName": "Кемеровская область",
+        "city": "Прокопьевск"
+    },
+    "Псков": {
+        "regionId": "pskov-oblast",
+        "regionName": "Псковская область",
+        "city": "Псков"
+    },
+    "Пушкин": {
+        "regionId": "spb",
+        "regionName": "Санкт-Петербург",
+        "city": "Пушкин"
+    },
+    "Реутов": {
+        "regionId": "moscow-oblast",
+        "regionName": "Московская область",
+        "city": "Реутов"
+    },
+    "Ростов-на-Дону": {
+        "regionId": "rostov-oblast",
+        "regionName": "Ростовская область",
+        "city": "Ростов-на-Дону"
+    },
+    "Ростовская обл": {
+        "regionId": "rostov-oblast",
+        "regionName": "Ростовская область",
+        "city": null
+    },
+    "Рубцовск": {
+        "regionId": "altay-kray",
+        "regionName": "Алтайский край",
+        "city": "Рубцовск"
+    },
+    "Рязань": {
+        "regionId": "ryazan-oblast",
+        "regionName": "Рязанская область",
+        "city": "Рязань"
+    },
+    "Самара": {
+        "regionId": "samara-oblast",
+        "regionName": "Самарская область",
+        "city": "Самара"
+    },
+    "Самарская обл": {
+        "regionId": "samara-oblast",
+        "regionName": "Самарская область",
+        "city": null
+    },
+    "Санкт-Петербург": {
+        "regionId": "spb",
+        "regionName": "Санкт-Петербург",
+        "city": "Санкт-Петербург"
+    },
+    "Саранск": {
+        "regionId": "mordovia",
+        "regionName": "Республика Мордовия",
+        "city": "Саранск"
+    },
+    "Саратов": {
+        "regionId": "saratov-oblast",
+        "regionName": "Саратовская область",
+        "city": "Саратов"
+    },
+    "Свердловская обл": {
+        "regionId": "sverdlovsk-oblast",
+        "regionName": "Свердловская область",
+        "city": null
+    },
+    "Северск": {
+        "regionId": "tomsk-oblast",
+        "regionName": "Томская область",
+        "city": "Северск"
+    },
+    "Сергиев Посад": {
+        "regionId": "moscow-oblast",
+        "regionName": "Московская область",
+        "city": "Сергиев Посад"
+    },
+    "Серпухов": {
+        "regionId": "moscow-oblast",
+        "regionName": "Московская область",
+        "city": "Серпухов"
+    },
+    "Смоленск": {
+        "regionId": "smolensk-oblast",
+        "regionName": "Смоленская область",
+        "city": "Смоленск"
+    },
+    "Сосновый Бор": {
+        "regionId": "leningrad-oblast",
+        "regionName": "Ленинградская область",
+        "city": "Сосновый Бор"
+    },
+    "Ставрополь": {
+        "regionId": "stavropol-kray",
+        "regionName": "Ставропольский край",
+        "city": "Ставрополь"
+    },
+    "Ставропольский край": {
+        "regionId": "stavropol-kray",
+        "regionName": "Ставропольский край",
+        "city": null
+    },
+    "Стерлитамак": {
+        "regionId": "bashkortostan",
+        "regionName": "Республика Башкортостан",
+        "city": "Стерлитамак"
+    },
+    "Ступино": {
+        "regionId": "moscow-oblast",
+        "regionName": "Московская область",
+        "city": "Ступино"
+    },
+    "Сургут": {
+        "regionId": "hmao",
+        "regionName": "Ханты-Мансийский АО",
+        "city": "Сургут"
+    },
+    "Сыктывкар": {
+        "regionId": "komi",
+        "regionName": "Республика Коми",
+        "city": "Сыктывкар"
+    },
+    "Таганрог": {
+        "regionId": "rostov-oblast",
+        "regionName": "Ростовская область",
+        "city": "Таганрог"
+    },
+    "Тамбов": {
+        "regionId": "tambov-oblast",
+        "regionName": "Тамбовская область",
+        "city": "Тамбов"
+    },
+    "Татарстан Респ": {
+        "regionId": "tatarstan",
+        "regionName": "Республика Татарстан",
+        "city": null
+    },
+    "Тверская обл": {
+        "regionId": "tver-oblast",
+        "regionName": "Тверская область",
+        "city": null
+    },
+    "Тверь": {
+        "regionId": "tver-oblast",
+        "regionName": "Тверская область",
+        "city": "Тверь"
+    },
+    "Тобольск": {
+        "regionId": "tyumen-oblast",
+        "regionName": "Тюменская область",
+        "city": "Тобольск"
+    },
+    "Тольятти": {
+        "regionId": "samara-oblast",
+        "regionName": "Самарская область",
+        "city": "Тольятти"
+    },
+    "Томск": {
+        "regionId": "tomsk-oblast",
+        "regionName": "Томская область",
+        "city": "Томск"
+    },
+    "Томская обл": {
+        "regionId": "tomsk-oblast",
+        "regionName": "Томская область",
+        "city": null
+    },
+    "Троицк": {
+        "regionId": "moscow",
+        "regionName": "Москва",
+        "city": "Троицк"
+    },
+    "Тула": {
+        "regionId": "tula-oblast",
+        "regionName": "Тульская область",
+        "city": "Тула"
+    },
+    "Тульская обл": {
+        "regionId": "tula-oblast",
+        "regionName": "Тульская область",
+        "city": null
+    },
+    "Тюменская обл": {
+        "regionId": "tyumen-oblast",
+        "regionName": "Тюменская область",
+        "city": null
+    },
+    "Тюмень": {
+        "regionId": "tyumen-oblast",
+        "regionName": "Тюменская область",
+        "city": "Тюмень"
+    },
+    "Улан-Удэ": {
+        "regionId": "buryatia",
+        "regionName": "Республика Бурятия",
+        "city": "Улан-Удэ"
+    },
+    "Ульяновск": {
+        "regionId": "ulyanovsk-oblast",
+        "regionName": "Ульяновская область",
+        "city": "Ульяновск"
+    },
+    "Уссурийск": {
+        "regionId": "primorsky-kray",
+        "regionName": "Приморский край",
+        "city": "Уссурийск"
+    },
+    "Уфа": {
+        "regionId": "bashkortostan",
+        "regionName": "Республика Башкортостан",
+        "city": "Уфа"
+    },
+    "Хабаровск": {
+        "regionId": "khabarovsk-kray",
+        "regionName": "Хабаровский край",
+        "city": "Хабаровск"
+    },
+    "Хакасия Респ": {
+        "regionId": "hakasiya",
+        "regionName": "Республика Хакасия",
+        "city": null
+    },
+    "Ханты-Мансийск": {
+        "regionId": "hmao",
+        "regionName": "Ханты-Мансийский АО",
+        "city": "Ханты-Мансийск"
+    },
+    "Чебоксары": {
+        "regionId": "chuvashia",
+        "regionName": "Чувашская Республика",
+        "city": "Чебоксары"
+    },
+    "Челябинск": {
+        "regionId": "chelyabinsk-oblast",
+        "regionName": "Челябинская область",
+        "city": "Челябинск"
+    },
+    "Челябинская обл": {
+        "regionId": "chelyabinsk-oblast",
+        "regionName": "Челябинская область",
+        "city": null
+    },
+    "Череповец": {
+        "regionId": "vologda-oblast",
+        "regionName": "Вологодская область",
+        "city": "Череповец"
+    },
+    "Черкесск": {
+        "regionId": "karachay-cherkessia",
+        "regionName": "Карачаево-Черкесская Республика",
+        "city": "Черкесск"
+    },
+    "Шахты": {
+        "regionId": "rostov-oblast",
+        "regionName": "Ростовская область",
+        "city": "Шахты"
+    },
+    "Электрогорск": {
+        "regionId": "moscow-oblast",
+        "regionName": "Московская область",
+        "city": "Электрогорск"
+    },
+    "Энгельс": {
+        "regionId": "saratov-oblast",
+        "regionName": "Саратовская область",
+        "city": "Энгельс"
+    },
+    "Южно-Сахалинск": {
+        "regionId": "sakhalin-oblast",
+        "regionName": "Сахалинская область",
+        "city": "Южно-Сахалинск"
+    },
+    "Юрга": {
+        "regionId": "kemerovo-oblast",
+        "regionName": "Кемеровская область",
+        "city": "Юрга"
+    },
+    "Якутск": {
+        "regionId": "yakutia",
+        "regionName": "Республика Саха (Якутия)",
+        "city": "Якутск"
+    },
+    "Ярославль": {
+        "regionId": "yaroslavl-oblast",
+        "regionName": "Ярославская область",
+        "city": "Ярославль"
+    },
+    "Ярославская обл": {
+        "regionId": "yaroslavl-oblast",
+        "regionName": "Ярославская область",
+        "city": null
+    }
+}

@@ -1,0 +1,94 @@
+{
+    "Eurospar": {
+        "brandId": "eurospar",
+        "brandName": "Eurospar"
+    },
+    "Eurospar (ТЦ Eurospar)": {
+        "brandId": "eurospar",
+        "brandName": "Eurospar"
+    },
+    "Eurospar (ТЦ АТ-Маркет)": {
+        "brandId": "eurospar",
+        "brandName": "Eurospar"
+    },
+    "Eurospar (ТЦ Квадро)": {
+        "brandId": "eurospar",
+        "brandName": "Eurospar"
+    },
+    "ЛЕНТА Гипермаркет": {
+        "brandId": "lenta",
+        "brandName": "Лента"
+    },
+    "ЛЕНТА Гипермаркет Эконом": {
+        "brandId": "lenta",
+        "brandName": "Лента"
+    },
+    "Победа": {
+        "brandId": "pobeda",
+        "brandName": "Победа"
+    },
+    "Победа (ТРК Победа)": {
+        "brandId": "pobeda",
+        "brandName": "Победа"
+    },
+    "Победа (ТЦ Апельсин)": {
+        "brandId": "pobeda",
+        "brandName": "Победа"
+    },
+    "Победа (ТЦ Маяк молл)": {
+        "brandId": "pobeda",
+        "brandName": "Победа"
+    },
+    "Победа (ТЦ Победа)": {
+        "brandId": "pobeda",
+        "brandName": "Победа"
+    },
+    "Солнечный круг СК-1": {
+        "brandId": "solnechny-krug",
+        "brandName": "Солнечный круг"
+    },
+    "Солнечный круг СК-2": {
+        "brandId": "solnechny-krug",
+        "brandName": "Солнечный круг"
+    },
+    "Солнечный круг СК-4": {
+        "brandId": "solnechny-krug",
+        "brandName": "Солнечный круг"
+    },
+    "Солнечный круг СК-6": {
+        "brandId": "solnechny-krug",
+        "brandName": "Солнечный круг"
+    },
+    "Солнечный круг СК-8": {
+        "brandId": "solnechny-krug",
+        "brandName": "Солнечный круг"
+    },
+    "Солнечный круг СК-9": {
+        "brandId": "solnechny-krug",
+        "brandName": "Солнечный круг"
+    },
+    "Солнечный круг СК-10": {
+        "brandId": "solnechny-krug",
+        "brandName": "Солнечный круг"
+    },
+    "Солнечный круг СК-11": {
+        "brandId": "solnechny-krug",
+        "brandName": "Солнечный круг"
+    },
+    "Солнечный круг СК-13": {
+        "brandId": "solnechny-krug",
+        "brandName": "Солнечный круг"
+    },
+    "Солнечный круг СК-16": {
+        "brandId": "solnechny-krug",
+        "brandName": "Солнечный круг"
+    },
+    "Солнечный круг СК-17": {
+        "brandId": "solnechny-krug",
+        "brandName": "Солнечный круг"
+    },
+    "Солнечный круг СК-18": {
+        "brandId": "solnechny-krug",
+        "brandName": "Солнечный круг"
+    }
+}

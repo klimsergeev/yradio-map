@@ -1,0 +1,450 @@
+/* === CSS Variables === */
+:root {
+    --sidebar-width: 300px;
+    --header-height: 56px;
+    --primary-color: #1a73e8;
+    --primary-hover: #1557b0;
+    --text-color: #333;
+    --text-muted: #666;
+    --border-color: #ddd;
+    --bg-color: #f5f5f5;
+    --white: #fff;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --radius: 8px;
+    --transition: 0.2s ease;
+}
+
+/* === Reset === */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-color);
+    background: var(--bg-color);
+}
+
+/* === App Layout === */
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* === Header === */
+.header {
+    height: var(--header-height);
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--white);
+    border-bottom: 1px solid var(--border-color);
+    flex-shrink: 0;
+}
+
+.header h1 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.header-period {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* === Main === */
+.main {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* === Sidebar === */
+.sidebar {
+    width: var(--sidebar-width);
+    background: var(--white);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.filters {
+    padding: 20px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+/* === Filter Group === */
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* === Filter Select (Custom Dropdown) === */
+.filter-select {
+    position: relative;
+}
+
+.filter-input {
+    width: 100%;
+    padding: 10px 36px 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    font-size: 14px;
+    background: var(--white);
+    transition: border-color var(--transition);
+}
+
+.filter-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.filter-input::placeholder {
+    color: #999;
+}
+
+.filter-clear {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background var(--transition), color var(--transition);
+}
+
+.filter-clear:hover {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.filter-select.has-value .filter-clear {
+    display: flex;
+}
+
+/* === Dropdown === */
+.filter-dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    max-height: 280px;
+    overflow-y: auto;
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    list-style: none;
+    display: none;
+    z-index: 100;
+}
+
+.filter-dropdown.open {
+    display: block;
+}
+
+.filter-dropdown li {
+    padding: 10px 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background var(--transition);
+}
+
+.filter-dropdown li:hover,
+.filter-dropdown li.highlighted {
+    background: var(--bg-color);
+}
+
+.filter-dropdown li.selected {
+    background: #e8f0fe;
+    color: var(--primary-color);
+}
+
+.filter-dropdown .item-name {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.filter-dropdown .item-count {
+    margin-left: 8px;
+    color: #999;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+.filter-dropdown .no-results {
+    padding: 12px;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+/* === Filter Info === */
+.filter-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color);
+}
+
+.counter {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.counter strong {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.reset-btn {
+    padding: 8px 16px;
+    background: none;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-size: 13px;
+    color: var(--text-color);
+    transition: background var(--transition), border-color var(--transition);
+}
+
+.reset-btn:hover {
+    background: var(--bg-color);
+    border-color: #ccc;
+}
+
+/* === Map Container === */
+.map-container {
+    flex: 1;
+    position: relative;
+    min-height: 300px;
+}
+
+.map-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 16px 24px;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    color: var(--text-muted);
+}
+
+/* === Balloon (Popup) === */
+.balloon {
+    padding: 16px;
+    min-width: 240px;
+    max-width: 320px;
+    font-size: 14px;
+}
+
+.balloon-brand {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 4px;
+    color: var(--text-color);
+}
+
+.balloon-address {
+    color: var(--text-muted);
+    margin-bottom: 2px;
+}
+
+.balloon-city {
+    color: #999;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.balloon-details {
+    border-top: 1px solid var(--border-color);
+    padding-top: 12px;
+}
+
+.balloon-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.balloon-row:last-child {
+    margin-bottom: 0;
+}
+
+.balloon-label {
+    color: var(--text-muted);
+}
+
+.balloon-value {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+/* === Mobile === */
+.mobile-filter-toggle {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 24px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    z-index: 200;
+    box-shadow: 0 4px 12px rgba(26, 115, 232, 0.4);
+    gap: 8px;
+    align-items: center;
+}
+
+.mobile-filter-toggle:hover {
+    background: var(--primary-hover);
+}
+
+.mobile-filter-toggle svg {
+    flex-shrink: 0;
+}
+
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 149;
+}
+
+/* === Mobile Breakpoint === */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 16px;
+    }
+
+    .header-period {
+        display: none;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: min(320px, 90vw);
+        z-index: 150;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .sidebar-overlay.open {
+        display: block;
+    }
+
+    .mobile-filter-toggle {
+        display: flex;
+    }
+
+    .map-container {
+        height: calc(100vh - var(--header-height));
+    }
+}
+
+/* === Scrollbar === */
+.filter-dropdown::-webkit-scrollbar,
+.filters::-webkit-scrollbar {
+    width: 6px;
+}
+
+.filter-dropdown::-webkit-scrollbar-track,
+.filters::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.filter-dropdown::-webkit-scrollbar-thumb,
+.filters::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.filter-dropdown::-webkit-scrollbar-thumb:hover,
+.filters::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+
+/* === Cluster Styles === */
+.cluster-marker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+
+.cluster-marker:hover {
+    transform: scale(1.1);
+}
+
+.cluster-marker.large {
+    width: 44px;
+    height: 44px;
+    font-size: 14px;
+}
+
+/* === Point Marker === */
+.point-marker {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
