@@ -14,7 +14,7 @@ import sys
 sys.stdout.reconfigure(line_buffering=True)
 
 # Конфигурация
-API_KEY = "cb4debfd-6a27-42fa-9356-b937e9b9bdc8"
+API_KEY = "f48befae-83e0-4c35-9044-61e857714fe1"
 GEOCODER_URL = "https://geocode-maps.yandex.ru/1.x/"
 CSV_PATH = Path(__file__).parent.parent / "data" / "map_prices.csv"
 

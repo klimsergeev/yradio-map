@@ -3,7 +3,7 @@
  */
 
 let map = null;
-let clusterer = null;
+let markers = [];
 let popup = null;
 
 // Начальная позиция — центр России
@@ -23,12 +23,8 @@ export async function initMap(containerId) {
     const {
         YMap,
         YMapDefaultSchemeLayer,
-        YMapDefaultFeaturesLayer,
-        YMapControls
+        YMapDefaultFeaturesLayer
     } = ymaps3;
-
-    // Импортируем стандартные контролы
-    const { YMapZoomControl } = await ymaps3.import('@yandex/ymaps3-controls@0.0.1');
 
     // Создаём карту
     map = new YMap(
@@ -41,13 +37,6 @@ export async function initMap(containerId) {
     // Добавляем слои
     map.addChild(new YMapDefaultSchemeLayer());
     map.addChild(new YMapDefaultFeaturesLayer({ zIndex: 1800 }));
-
-    // Добавляем контролы зума
-    map.addChild(
-        new YMapControls({ position: 'right' }).addChild(
-            new YMapZoomControl({})
-        )
-    );
 
     // Скрываем индикатор загрузки
     const loadingEl = document.getElementById('map-loading');
@@ -65,35 +54,21 @@ export async function initMap(containerId) {
 export async function updateMarkers(points) {
     if (!map) return;
 
-    // Удаляем старый кластеризатор
-    if (clusterer) {
-        map.removeChild(clusterer);
-        clusterer = null;
-    }
+    // Удаляем старые маркеры
+    markers.forEach(m => map.removeChild(m));
+    markers = [];
 
     if (points.length === 0) return;
 
-    // Импортируем модуль кластеризации
-    const { YMapClusterer, clusterByGrid } = await ymaps3.import('@yandex/ymaps3-clusterer');
+    const { YMapMarker } = ymaps3;
 
-    // Преобразуем точки в features
+    // Создаём маркеры для каждой точки
     // Яндекс Карты API 3.0 использует [longitude, latitude], а данные в [lat, lon]
-    const features = points.map(point => ({
-        type: 'Feature',
-        id: point.id,
-        geometry: {
-            type: 'Point',
-            coordinates: [point.coords[1], point.coords[0]] // [lon, lat]
-        },
-        properties: point
-    }));
+    points.forEach(point => {
+        const coordinates = [point.coords[1], point.coords[0]]; // [lon, lat]
 
-    // Функция создания маркера точки
-    const marker = (feature) => {
         const element = document.createElement('div');
         element.className = 'point-marker';
-
-        // Используем стандартную иконку Яндекс Карт
         element.innerHTML = `
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#F44336"/>
@@ -103,42 +78,17 @@ export async function updateMarkers(points) {
 
         element.addEventListener('click', (e) => {
             e.stopPropagation();
-            showPopup(feature.properties, feature.geometry.coordinates);
+            showPopup(point, coordinates);
         });
 
-        return new ymaps3.YMapMarker(
-            {
-                coordinates: feature.geometry.coordinates,
-                onClick: () => showPopup(feature.properties, feature.geometry.coordinates)
-            },
-            element
-        );
-    };
-
-    // Функция создания кластера
-    const cluster = (coordinates, features) => {
-        const element = document.createElement('div');
-        element.className = 'cluster-marker';
-        if (features.length > 99) {
-            element.classList.add('large');
-        }
-        element.textContent = features.length > 999 ? '999+' : features.length;
-
-        return new ymaps3.YMapMarker(
+        const marker = new YMapMarker(
             { coordinates },
             element
         );
-    };
 
-    // Создаём кластеризатор
-    clusterer = new YMapClusterer({
-        method: clusterByGrid({ gridSize: 64 }),
-        features,
-        marker,
-        cluster
+        markers.push(marker);
+        map.addChild(marker);
     });
-
-    map.addChild(clusterer);
 }
 
 /**
