@@ -1,0 +1,29 @@
+# System files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.idea/
+.vscode/
+*.sublime-*
+
+# Claude/Cursor AI
+.claude/
+CLAUDE.md
+
+# Project archive
+archive/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+venv/
+.venv/
+
+# Logs
+*.log
