@@ -61,7 +61,12 @@ function initDropdown(container, input, dropdown, type) {
         const query = input.value.toLowerCase().trim();
         const items = getAvailableItems(type);
         const filtered = query
-            ? items.filter(item => item.name.toLowerCase().includes(query))
+            ? items.filter(item =>
+                item.name.toLowerCase().includes(query) ||
+                (item.cities && item.cities.some(city =>
+                    city.toLowerCase().includes(query)
+                ))
+              )
             : items;
 
         renderDropdown(dropdown, filtered, type);
