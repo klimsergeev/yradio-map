@@ -7,7 +7,10 @@ import { initFilters, getFilteredPoints, setFilterValues, resetFilters, getFilte
 import { loadFromUrl, saveToUrl, onUrlChange } from './url-state.js';
 import { getCachedData, setCachedData } from './cache.js';
 
-const DATA_URL = './data/points.json';
+// Определяем базовый путь относительно расположения скрипта
+const scriptUrl = import.meta.url;
+const baseUrl = new URL('../', scriptUrl).href;
+const DATA_URL = baseUrl + 'data/points.json';
 
 let appData = null;
 
