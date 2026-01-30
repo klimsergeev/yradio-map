@@ -351,31 +351,36 @@ body {
 .mobile-filter-toggle {
     display: none;
     position: fixed;
-    bottom: 20px;
+    bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
-    padding: 12px 20px;
-    background: var(--primary-color);
-    color: var(--white);
+    height: 54px;
+    padding: 0 24px 2px;
+    background: #102B3A;
+    color: #FFFFFF;
     border: none;
-    border-radius: 24px;
-    font-size: 14px;
-    font-weight: 500;
+    border-radius: 12px;
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.1666666666666667em;
     cursor: pointer;
     z-index: 200;
-    box-shadow: 0 4px 12px rgba(229, 57, 53, 0.4);
     gap: 8px;
     align-items: center;
+    justify-content: center;
+    white-space: nowrap;
 }
 
 .mobile-filter-toggle:hover {
-    background: var(--primary-hover);
+    background: #1A3F54;
 }
 
-.mobile-filter-toggle svg,
 .mobile-filter-toggle .material-symbols-outlined {
     flex-shrink: 0;
-    font-size: 20px;
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
 }
 
 .sidebar-overlay {

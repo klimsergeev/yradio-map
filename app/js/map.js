@@ -5,6 +5,8 @@
 let map = null;
 let markers = [];
 let popup = null;
+let pointsMap = new Map(); // Хранилище данных точек по ID
+let delegatedListenerAttached = false;
 
 // Начальная позиция — центр России
 // Яндекс Карты API 3.0 использует формат [longitude, latitude]
@@ -12,6 +14,21 @@ const INITIAL_LOCATION = {
     center: [37.573856, 55.751574],
     zoom: 4
 };
+
+/**
+ * Обработчик клика по маркеру (делегирование событий)
+ */
+function handleMarkerClick(event) {
+    const markerEl = event.target.closest('[data-point-id]');
+    if (!markerEl) return;
+
+    const pointId = markerEl.dataset.pointId;
+    const pointData = pointsMap.get(pointId);
+    if (!pointData) return;
+
+    const coordinates = [pointData.coords[1], pointData.coords[0]]; // [lon, lat]
+    showPopup(pointData, coordinates);
+}
 
 /**
  * Инициализация карты
@@ -26,9 +43,11 @@ export async function initMap(containerId) {
         YMapDefaultFeaturesLayer
     } = ymaps3;
 
+    const container = document.getElementById(containerId);
+
     // Создаём карту
     map = new YMap(
-        document.getElementById(containerId),
+        container,
         {
             location: INITIAL_LOCATION
         }
@@ -38,6 +57,12 @@ export async function initMap(containerId) {
     map.addChild(new YMapDefaultSchemeLayer());
     map.addChild(new YMapDefaultFeaturesLayer({ zIndex: 1800 }));
 
+    // Один event listener на контейнере карты (делегирование событий)
+    if (!delegatedListenerAttached) {
+        container.addEventListener('click', handleMarkerClick);
+        delegatedListenerAttached = true;
+    }
+
     // Скрываем индикатор загрузки
     const loadingEl = document.getElementById('map-loading');
     if (loadingEl) {
@@ -45,6 +70,13 @@ export async function initMap(containerId) {
     }
 
     return map;
+}
+
+/**
+ * Генерация уникального ID для точки
+ */
+function generatePointId(point, index) {
+    return `point-${index}-${point.coords[0]}-${point.coords[1]}`;
 }
 
 /**
@@ -57,6 +89,7 @@ export async function updateMarkers(points) {
     // Удаляем старые маркеры
     markers.forEach(m => map.removeChild(m));
     markers = [];
+    pointsMap.clear();
 
     if (points.length === 0) return;
 
@@ -64,22 +97,17 @@ export async function updateMarkers(points) {
 
     // Создаём маркеры для каждой точки
     // Яндекс Карты API 3.0 использует [longitude, latitude], а данные в [lat, lon]
-    points.forEach(point => {
+    points.forEach((point, index) => {
         const coordinates = [point.coords[1], point.coords[0]]; // [lon, lat]
+        const pointId = generatePointId(point, index);
+
+        // Сохраняем данные точки в Map
+        pointsMap.set(pointId, point);
 
         const element = document.createElement('div');
-        element.className = 'point-marker';
-        element.innerHTML = `
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#F44336"/>
-                <circle cx="12" cy="9" r="2.5" fill="white"/>
-            </svg>
-        `;
-
-        element.addEventListener('click', (e) => {
-            e.stopPropagation();
-            showPopup(point, coordinates);
-        });
+        element.dataset.pointId = pointId; // data-атрибут для идентификации
+        element.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#E53030"/><circle cx="12" cy="12" r="4" fill="white"/></svg>`;
+        element.style.cssText = 'cursor: pointer; transform: translate(-50%, -50%);';
 
         const marker = new YMapMarker(
             { coordinates },
@@ -180,6 +208,19 @@ async function showPopup(point, coordinates) {
     );
 
     map.addChild(popup);
+
+    // Плавно перемещаем карту к точке со смещением вверх для видимости popup
+    // Popup примерно 200px высотой + 12px отступ + стрелка
+    // Смещаем центр вниз от точки, чтобы popup оказался по центру вьюпорта
+    const currentZoom = map.zoom || 14;
+    // Смещение в градусах зависит от зума: чем больше зум, тем меньше смещение
+    const latOffset = 0.002 * Math.pow(2, 14 - currentZoom);
+
+    map.setLocation({
+        center: [coordinates[0], coordinates[1] - latOffset],
+        zoom: currentZoom,
+        duration: 400
+    });
 }
 
 /**

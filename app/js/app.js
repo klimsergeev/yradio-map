@@ -86,12 +86,14 @@ function initMobileMenu() {
     function openSidebar() {
         sidebar.classList.add('open');
         overlay.classList.add('open');
+        toggleBtn.style.display = 'none';
         document.body.style.overflow = 'hidden';
     }
 
     function closeSidebar() {
         sidebar.classList.remove('open');
         overlay.classList.remove('open');
+        toggleBtn.style.display = '';
         document.body.style.overflow = '';
     }
 
