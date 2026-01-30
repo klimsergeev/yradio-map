@@ -11,6 +11,7 @@ let callbacks = {};
 let regionFilter, brandFilter;
 let regionInput, brandInput;
 let regionDropdown, brandDropdown;
+let resetBtn;
 
 /**
  * Инициализация фильтров
@@ -40,7 +41,11 @@ export function initFilters(filters, points, options = {}) {
     renderDropdown(brandDropdown, allFilters.brands, 'brand');
 
     // Кнопка сброса
-    document.getElementById('reset-filters').addEventListener('click', resetFilters);
+    resetBtn = document.getElementById('reset-filters');
+    resetBtn.addEventListener('click', resetFilters);
+
+    // Скрываем кнопку по умолчанию
+    updateResetButtonVisibility();
 }
 
 /**
@@ -166,6 +171,9 @@ function selectItem(type, id) {
     // Обновляем противоположный фильтр
     updateDependentFilter(type);
 
+    // Обновляем видимость кнопки сброса
+    updateResetButtonVisibility();
+
     // Вызываем callback
     if (callbacks.onFilterChange) {
         callbacks.onFilterChange(currentValues);
@@ -188,6 +196,9 @@ function clearFilter(type) {
     // Обновляем списки
     updateDependentFilter(type);
     renderDropdown(dropdown, getAvailableItems(type), type);
+
+    // Обновляем видимость кнопки сброса
+    updateResetButtonVisibility();
 
     if (callbacks.onFilterChange) {
         callbacks.onFilterChange(currentValues);
@@ -255,9 +266,25 @@ export function resetFilters() {
     renderDropdown(regionDropdown, allFilters.regions, 'region');
     renderDropdown(brandDropdown, allFilters.brands, 'brand');
 
+    // Скрываем кнопку сброса
+    updateResetButtonVisibility();
+
+    // Закрываем popup на карте
+    if (callbacks.onResetFilters) {
+        callbacks.onResetFilters();
+    }
+
     if (callbacks.onFilterChange) {
         callbacks.onFilterChange(currentValues);
     }
+}
+
+/**
+ * Обновление видимости кнопки сброса
+ */
+function updateResetButtonVisibility() {
+    const hasFilters = currentValues.region !== null || currentValues.brand !== null;
+    resetBtn.classList.toggle('hidden', !hasFilters);
 }
 
 /**
@@ -285,6 +312,9 @@ export function setFilterValues(values) {
     // Обновляем списки
     renderDropdown(regionDropdown, getAvailableItems('region'), 'region');
     renderDropdown(brandDropdown, getAvailableItems('brand'), 'brand');
+
+    // Обновляем видимость кнопки сброса
+    updateResetButtonVisibility();
 }
 
 /**

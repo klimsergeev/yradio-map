@@ -185,7 +185,7 @@ async function showPopup(point, coordinates) {
 /**
  * Закрыть popup
  */
-function closePopup() {
+export function closePopup() {
     if (popup) {
         map.removeChild(popup);
         popup = null;

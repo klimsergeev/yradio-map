@@ -2,7 +2,7 @@
  * Главный модуль приложения
  */
 
-import { initMap, updateMarkers, fitToPoints, fitToAllPoints } from './map.js';
+import { initMap, updateMarkers, fitToPoints, fitToAllPoints, closePopup } from './map.js';
 import { initFilters, getFilteredPoints, setFilterValues, resetFilters, getFilterValues } from './filters.js';
 import { loadFromUrl, saveToUrl, onUrlChange } from './url-state.js';
 import { getCachedData, setCachedData } from './cache.js';
@@ -129,9 +129,11 @@ async function init() {
         console.log('Map initialized');
 
         // Инициализация фильтров
-        initFilters(appData.filters, appData.points, {
-            onFilterChange: handleFilterChange
-        });
+        const filtersCallbacks = {
+            onFilterChange: handleFilterChange,
+            onResetFilters: closePopup
+        };
+        initFilters(appData.filters, appData.points, filtersCallbacks);
         console.log('Filters initialized');
 
         // Восстановление состояния из URL

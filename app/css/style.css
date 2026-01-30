@@ -1,16 +1,43 @@
+/* === Font Import === */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap');
+
+/* === Material Symbols === */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.material-symbols-outlined.filled {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
 /* === CSS Variables === */
 :root {
+    /* Layout */
     --sidebar-width: 300px;
     --header-height: 56px;
-    --primary-color: #1a73e8;
-    --primary-hover: #1557b0;
-    --text-color: #333;
-    --text-muted: #666;
-    --border-color: #ddd;
-    --bg-color: #f5f5f5;
-    --white: #fff;
-    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    /* Colors - Y-Radio Brand */
+    --primary-color: #E53935;
+    --primary-hover: #C62828;
+    --primary-dark: #102B3A;
+    --primary-dark-hover: #1A3F54;
+
+    /* Text Colors */
+    --text-color: #102B3A;
+    --text-muted: #697D87;
+    --text-light: #8A9AA3;
+
+    /* Background & Border */
+    --border-color: #E0E5E9;
+    --bg-color: #F5F7F9;
+    --bg-light: #FAFBFC;
+    --white: #FFFFFF;
+
+    /* Effects */
+    --shadow: 0 2px 8px rgba(16, 43, 58, 0.1);
+    --shadow-lg: 0 8px 24px rgba(16, 43, 58, 0.15);
     --radius: 8px;
+    --radius-lg: 16px;
     --transition: 0.2s ease;
 }
 
@@ -26,14 +53,16 @@
 html,
 body {
     height: 100%;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 14px;
     line-height: 1.5;
     color: var(--text-color);
     background: var(--bg-color);
+    font-optical-sizing: auto;
 }
 
 /* === App Layout === */
@@ -120,7 +149,7 @@ body {
 
 .filter-input:focus {
     outline: none;
-    border-color: var(--primary-color);
+    border-color: #4DB9FF;
 }
 
 .filter-input::placeholder {
@@ -190,7 +219,7 @@ body {
 }
 
 .filter-dropdown li.selected {
-    background: #e8f0fe;
+    background: rgba(229, 57, 53, 0.1);
     color: var(--primary-color);
 }
 
@@ -334,7 +363,7 @@ body {
     font-weight: 500;
     cursor: pointer;
     z-index: 200;
-    box-shadow: 0 4px 12px rgba(26, 115, 232, 0.4);
+    box-shadow: 0 4px 12px rgba(229, 57, 53, 0.4);
     gap: 8px;
     align-items: center;
 }
@@ -343,8 +372,10 @@ body {
     background: var(--primary-hover);
 }
 
-.mobile-filter-toggle svg {
+.mobile-filter-toggle svg,
+.mobile-filter-toggle .material-symbols-outlined {
     flex-shrink: 0;
+    font-size: 20px;
 }
 
 .sidebar-overlay {
@@ -447,4 +478,802 @@ body {
     width: 24px;
     height: 24px;
     cursor: pointer;
+}
+
+/* ===================================================
+   LANDING PAGE STYLES (Pixel-Perfect from Figma)
+   =================================================== */
+
+/* === Landing Layout === */
+.landing {
+    position: relative;
+    min-height: 100vh;
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* === Landing Hero Section === */
+.landing-hero {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 120px;
+    padding: 0 0 44px 0;
+    background: var(--white);
+    flex: 1;
+    min-height: 0;
+}
+
+/* === Hero Images (Absolute positioned) === */
+.hero-image {
+    position: absolute;
+    pointer-events: none;
+}
+
+.hero-image img {
+    display: block;
+}
+
+/* Desktop Left Image: height 100% of container, width auto (proportional) */
+.hero-image--left {
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.hero-image--left img {
+    height: 100%;
+    width: auto;
+}
+
+/* Desktop Right Image: height 100% of container, width auto (proportional) */
+.hero-image--right {
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.hero-image--right img {
+    height: 100%;
+    width: auto;
+}
+
+/* Mobile Images (hidden on desktop) */
+.hero-image--top,
+.hero-image--bottom {
+    display: none;
+}
+
+/* === Landing Header (Logo area 960x108) === */
+.landing-header {
+    width: 960px;
+    height: 108px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 32px;
+    flex-shrink: 0;
+    z-index: 10;
+}
+
+.landing-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.landing-logo img {
+    width: 118px;
+    height: 44px;
+}
+
+/* === Hero Content (960px width, gap: 32px) === */
+.hero-content {
+    width: 960px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    z-index: 10;
+}
+
+/* === Hero Message (gap: 12px) === */
+.hero-message {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Title: Rubik Bold 44px, lineHeight 1.18em, color #102B3A, text-align LEFT */
+.hero-title {
+    font-family: "Rubik", sans-serif;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.18em;
+    color: #102B3A;
+    text-align: left;
+    margin: 0;
+}
+
+/* Text: Rubik Regular 24px, lineHeight 1.25em, color #102B3A */
+.hero-subtitle {
+    font-family: "Rubik", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.25em;
+    color: #102B3A;
+    text-align: left;
+    margin: 0;
+}
+
+/* === Hero Buttons (gap: 16px, row) === */
+.hero-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+/* Common button styles */
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 54px;
+    padding: 0 24px;
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all var(--transition);
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+}
+
+.hero-btn svg,
+.hero-btn .material-symbols-outlined {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+}
+
+/* Secondary Button (Map): 54px height, 12px radius, fill #F4F5F5, text #102B3A */
+.hero-btn--secondary {
+    height: 54px;
+    padding: 0 24px 2px;
+    background: #F4F5F5;
+    color: #102B3A;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.17em;
+}
+
+/* Icon color in secondary button */
+.hero-btn--secondary .material-symbols-outlined {
+    color: #7D95A1;
+}
+
+.hero-btn--secondary:hover {
+    background: #DFE0E0;
+}
+
+/* Primary Button (CTA): fill #E53935, text #FFFFFF */
+.hero-btn--primary {
+    background: #E53935;
+    color: #FFFFFF;
+}
+
+.hero-btn--primary:hover {
+    background: #C62828;
+}
+
+/* === Proofs Section (gap: 24px, width: 960px) === */
+.hero-proofs {
+    width: 960px;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    z-index: 10;
+}
+
+/* Proof Card: borderRadius 20px, fill rgba(164,218,253,0.08), backdrop blur 9px, padding 16px 24px 18px */
+.proof-card {
+    flex: 1;
+    background: rgba(164, 218, 253, 0.08);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    border-radius: 20px;
+    padding: 16px 24px 18px;
+}
+
+/* Title: Rubik Medium 40px, lineHeight 1.25em, color #102B3A */
+.proof-title {
+    font-family: "Rubik", sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.25em;
+    color: #102B3A;
+}
+
+/* Description: Rubik Regular 16px, lineHeight 1.5em, color #102B3A */
+.proof-description {
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: #102B3A;
+}
+
+/* === Footer (fill rgba(164,218,253,0.08), flex-grow to fill viewport) === */
+.landing-footer {
+    background: rgba(164, 218, 253, 0.08);
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Footer Container (960px width, row, gap 24px, padding 64px 0) */
+.footer-container {
+    width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 0;
+}
+
+/* Footer Links Section (column, gap 8px) */
+.footer-links-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+/* Footer Links Row */
+.footer-links-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+}
+
+/* Footer Link: Rubik Regular 16px, color #102B3A */
+.footer-link {
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #102B3A;
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+.footer-link:hover {
+    color: #697D87;
+}
+
+/* Separator bullet */
+.footer-separator {
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    color: #102B3A;
+    margin: 0 8px;
+}
+
+/* Copyright: Rubik Regular 16px, color #697D87 */
+.footer-copyright {
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #697D87;
+}
+
+/* Footer Brand (logo 152x56) */
+.footer-brand {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 152px;
+    height: 56px;
+}
+
+/* Legacy CTA support (for map page back button, etc.) */
+.hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 32px;
+    background: var(--primary-color);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: var(--radius-lg);
+    transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+    box-shadow: 0 4px 16px rgba(229, 57, 53, 0.3);
+}
+
+.hero-cta:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(229, 57, 53, 0.4);
+}
+
+.hero-cta svg {
+    transition: transform var(--transition);
+}
+
+.hero-cta:hover svg {
+    transform: translateX(4px);
+}
+
+/* ===================================================
+   MAP PAGE STYLES (Figma node 38-1911)
+   =================================================== */
+
+/* Map Page Layout */
+.map-page {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+/* Close Button: 54x54, border-radius 12px, bg #F4F5F5, positioned top-right */
+.map-close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F4F5F5;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #102B3A;
+    z-index: 100;
+    transition: background var(--transition);
+}
+
+.map-close-btn:hover {
+    background: #DFE0E0;
+}
+
+.map-close-btn .material-symbols-outlined {
+    font-size: 24px;
+    color: #7D95A1;
+}
+
+/* Side Panel: 360px width, full height, bg white, padding 24px */
+.map-sidebar {
+    width: 360px;
+    height: 100%;
+    background: #FFFFFF;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex-shrink: 0;
+    overflow-y: auto;
+    z-index: 50;
+}
+
+/* Sidebar Header */
+.sidebar-header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* Title: 20px, font-weight 500, color #102B3A */
+.sidebar-title {
+    font-family: "Rubik", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3em;
+    color: #102B3A;
+    margin: 0;
+}
+
+/* Description: 14px, font-weight 400, color #102B3A */
+.sidebar-description {
+    font-family: "Rubik", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4em;
+    color: #102B3A;
+    margin: 0;
+}
+
+/* Sidebar Filters Container */
+.sidebar-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Filter Group: gap 6px between label and input */
+.map-page .filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 0;
+}
+
+/* Label: 16px, font-weight 500, color #102B3A */
+.map-page .filter-group label {
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #102B3A;
+    margin-bottom: 0;
+}
+
+/* Input: bg #F9FAFC, border 1px solid rgba(188, 195, 208, 0.5), border-radius 8px, padding 0 12px */
+.map-page .filter-input {
+    width: 100%;
+    height: 44px;
+    padding: 0 40px 0 12px;
+    background: #F9FAFC;
+    border: 1px solid rgba(188, 195, 208, 0.5);
+    border-radius: 8px;
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #102B3A;
+    transition: border-color var(--transition);
+}
+
+.map-page .filter-input:focus {
+    outline: none;
+    border-color: #4DB9FF;
+}
+
+/* Placeholder: color #697D87, font-size 16px */
+.map-page .filter-input::placeholder {
+    color: #697D87;
+    font-size: 16px;
+}
+
+/* Filter Clear Button */
+.map-page .filter-clear {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background var(--transition);
+}
+
+.map-page .filter-clear .material-symbols-outlined {
+    font-size: 20px;
+    color: #7D95A1;
+}
+
+.map-page .filter-clear:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.map-page .filter-select.has-value .filter-clear {
+    display: flex;
+}
+
+/* Filter Actions: padding-top 8px */
+.filter-actions {
+    padding-top: 8px;
+}
+
+/* Reset Button: Secondary, 44px height, border-radius 10px, bg #F4F5F5, text #102B3A */
+.map-page .reset-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 44px;
+    padding: 0 16px 2px;
+    background: #F4F5F5;
+    border: none;
+    border-radius: 10px;
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #102B3A;
+    cursor: pointer;
+    transition: background var(--transition);
+}
+
+.map-page .reset-btn:hover {
+    background: #DFE0E0;
+}
+
+/* Reset Button Icon: 24x24, color #7D95A1 */
+.map-page .reset-btn .material-symbols-outlined {
+    font-size: 24px;
+    color: #7D95A1;
+}
+
+/* Reset Button Hidden State */
+.map-page .reset-btn.hidden {
+    display: none;
+}
+
+/* Map Container: fills remaining space */
+.map-page .map-container {
+    flex: 1;
+    position: relative;
+    min-height: 300px;
+}
+
+/* ===================================================
+   LANDING TABLET/DESKTOP ADJUSTMENTS
+   =================================================== */
+
+@media (max-width: 1366px) {
+    /* Hero images remain proportional to container height */
+    .landing-header,
+    .hero-content,
+    .hero-proofs,
+    .footer-container {
+        width: calc(100% - 80px);
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* ===================================================
+   LANDING MOBILE STYLES (768px - Figma Mobile Landing)
+   =================================================== */
+
+@media (max-width: 768px) {
+    /* Hide desktop images, show mobile images */
+    .hero-image--left,
+    .hero-image--right {
+        display: none;
+    }
+
+    /* Landing Hero: column, center, gap 40px, padding 0 24px 32px (Figma layout_MPUJ3T) */
+    .landing-hero {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 0 24px 32px 24px;
+        position: relative;
+        min-height: auto;
+        background: transparent;
+        overflow: visible;
+    }
+
+    /* Header (logo): full width, logo aligned left, 108px height, padding-top 32px */
+    .landing-header {
+        width: 100%;
+        max-width: none;
+        height: 108px;
+        margin: 0;
+        justify-content: flex-start;
+        padding-top: 32px;
+    }
+
+    /* Hero Content: full width of container, gap 32px */
+    .hero-content {
+        width: 100%;
+        max-width: none;
+        gap: 32px;
+    }
+
+    /* Message: gap 12px */
+    .hero-message {
+        gap: 12px;
+    }
+
+    /* Title: Rubik Bold 32px, lineHeight 1.2em, text-align CENTER */
+    .hero-title {
+        font-size: 32px;
+        line-height: 1.2em;
+        text-align: center;
+    }
+
+    /* Text: Rubik Regular 20px, lineHeight 1.25em, text-align CENTER */
+    .hero-subtitle {
+        font-size: 20px;
+        line-height: 1.25em;
+        text-align: center;
+    }
+
+    /* Buttons: column, gap 12px, full width */
+    .hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    /* Buttons: fill width, height 54px */
+    .hero-btn {
+        width: 100%;
+        height: 54px;
+    }
+
+    /* Proofs: column, gap 8px, full width of container */
+    .hero-proofs {
+        width: 100%;
+        max-width: none;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    /* Proof Card: DARKER background on mobile (0.16 vs 0.08) */
+    .proof-card {
+        width: 100%;
+        background: rgba(164, 218, 253, 0.16);
+    }
+
+    /* Card Title: Rubik Medium 32px, text-align CENTER */
+    .proof-title {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .proof-description {
+        text-align: center;
+    }
+
+    /* Mobile images: top and bottom decorative backgrounds */
+    /* Top image: absolute at top of hero, 100% x 180px */
+    .hero-image--top {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 180px;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .hero-image--top img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Bottom image: positioned above footer, behind Proofs cards (Figma: 360x180) */
+    .hero-image--bottom {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 180px;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .hero-image--bottom img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Logo: smaller on mobile (86x32 from Figma mobile Header) */
+    .landing-logo img {
+        width: 86px;
+        height: 32px;
+    }
+
+    /* Footer: padding 44px 24px, no margin-top (bottom image is absolute) */
+    .landing-footer {
+        position: relative;
+        align-items: flex-start;
+        padding: 44px 24px;
+    }
+
+    /* Footer Container: column, gap 24px, LEFT aligned (Figma) */
+    .footer-container {
+        width: 100%;
+        flex-direction: column;
+        gap: 24px;
+        text-align: left;
+        padding: 0;
+        align-items: flex-start;
+    }
+
+    /* Footer Links Section: gap 16px, LEFT aligned */
+    .footer-links-section {
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+    /* Links on separate lines (column layout, no bullet separators) */
+    .footer-links-row {
+        flex-direction: column;
+        gap: 0;
+        align-items: flex-start;
+    }
+
+    /* Footer links: line-height 1.5em (24px at 16px font) for proper spacing between lines */
+    .footer-link {
+        line-height: 1.5em;
+    }
+
+    /* Hide bullet separators on mobile */
+    .footer-separator {
+        display: none;
+    }
+
+    /* Footer brand: LEFT aligned */
+    .footer-brand {
+        justify-content: flex-start;
+    }
+
+    /* Footer logo: 152x56px (unchanged) */
+    .footer-logo {
+        width: 152px;
+        height: 56px;
+    }
+}
+
+/* ===================================================
+   MAP PAGE MOBILE ADJUSTMENTS
+   =================================================== */
+
+@media (max-width: 768px) {
+    /* Close button: smaller on mobile */
+    .map-close-btn {
+        top: 16px;
+        right: 16px;
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+    }
+
+    /* Sidebar: slide-in from left */
+    .map-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: min(320px, 90vw);
+        z-index: 150;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .map-sidebar.open {
+        transform: translateX(0);
+    }
+
+    /* Mobile filter toggle */
+    .map-page .mobile-filter-toggle {
+        display: flex;
+    }
+
+    /* Map container: full width on mobile */
+    .map-page .map-container {
+        width: 100%;
+        height: 100%;
+    }
 }
